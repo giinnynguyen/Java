@@ -1,4 +1,5 @@
 1. Constructor:
+
 Định nghĩa: A constructor is used in the creation of an object that is an instance of a class
 
 Tức là constructor ko được dùng để tạo object, mà được gọi sau cùng trong quá trình tạo đối tượng. Mục đích để khởi tạo giá trị cho các thuộc tính mà người dùng mong muốn tác động vào.
@@ -16,6 +17,7 @@ Này đọc kĩ mô tả là hiểu. Tuy nhiên thực tế, protected không đ
 Dẫn đến trong trường hợp khi bạn ko thể access property nào đó, thì getter/setter là cách để get thông tin và chỉnh sửa property đó.
 
 3. main & class:
+
 có thể bỏ tất cả vào main, cũng có thể ko tách class, nhưng thế thì bỏ qua lợi thế của oop.
 + Việc tách class là nguyên lý Single Reponsibility trong SOLID.
 + Hàm main thường giữ nhiệm vụ run application, start config một số tài nguyên. Ko có hướng dẫn chi tiết cái nào nên bỏ vào main, cái nào ko. Tùy thuộc vào hàm main của bạn làm gì trong ứng dụng, keep it simple sao cho khi đọc source code bạn có thể hình dung luồng ứng dụng bạn chạy ntn
