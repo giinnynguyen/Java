@@ -21,3 +21,22 @@ Dẫn đến trong trường hợp khi bạn ko thể access property nào đó,
 có thể bỏ tất cả vào main, cũng có thể ko tách class, nhưng thế thì bỏ qua lợi thế của oop.
 + Việc tách class là nguyên lý Single Reponsibility trong SOLID.
 + Hàm main thường giữ nhiệm vụ run application, start config một số tài nguyên. Ko có hướng dẫn chi tiết cái nào nên bỏ vào main, cái nào ko. Tùy thuộc vào hàm main của bạn làm gì trong ứng dụng, keep it simple sao cho khi đọc source code bạn có thể hình dung luồng ứng dụng bạn chạy ntn
+
+____
+
+**Định nghĩa**: Một constructor được sử dụng trong quá trình tạo object - ko phải để tạo object (A constructor is used in the creation of an object that is an instance of a class)
+
+Rule: <br>
++ Constructor phải có cùng tên với class và return nothing
++ Constructor không phải là members. Vì vậy một class con không thể kế thừa constructor và cũng không sử dụng được feature hiding hoặc overriding
+Constructor body: 
++ Super hoặc this (call đến constructor khác) nếu có thì phải là dòng đầu tiên
++ Một constructor call chính nó sẽ gây ra lỗi biên dịch
++ Constructor luôn gọi đến constructor cha của nó, nếu ko khai báo tường minh thì một constructor rỗng sẽ được gọi ngầm.
++ Lỗi biên dịch xảy ra khi một class có default constructor được tạo ngầm nhưng ở super class ko có constructor rỗng nào có thể truy cập được.
+
+Default constructor: Đối với non-private inner class, java ngầm tạo 1 default constructor có 1 tham số là enclosing instance (tức instance của class outer gần nhất). 
+
+**Tại sao constructor trong java ko kế thừa được?** 
+
+ Bản chất kế thừa là lấy của cha làm thành của riêng, những gì kế thừa của cha đều trở thành sở hữu/nội tại của class con. Nếu kế thừa thì trong class con sẽ có constructor y hệt cha, vi phạm nguyên tắc constructor phải cùng tên vs class.
