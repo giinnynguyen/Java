@@ -1,2 +1,14 @@
+### Copy vs Cloning
+Copy: object gốc và object copy có giá trị giống nhau nhưng vẫn trỏ tới cùng một vùng nhớ, vì vậy thay đổi ở một object sẽ affect tới object còn lại
+
+Cloning: object gốc và object cloning sẽ trỏ tới 2 vùng nhớ khác nhau, thay đổi object không ảnh hưởng object còn lại
+
+Để clone một object, dùng method clone() của class Object. Với điều kiện clone object phải implement Clonable interface, nếu không sẽ lỗi CloneNotSupportedException
+```java
+copy = original.clone()
+```
+
+Nhưng default, Object's clone method dùng shallow copy, tức là nó sẽ không clone biến reference bên trong object (tức biến reference bên trong object vẫn trỏ cùng vùng nhớ).
+
 ### Shallow copy vs Deep copy
 
