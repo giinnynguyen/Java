@@ -8,10 +8,8 @@ Cloning: object gốc và object cloning sẽ trỏ tới 2 vùng nhớ khác nh
 copy = original.clone()
 ```
 
+### Shallow copy vs Deep copy
 Nhưng default, Object's clone method dùng shallow copy, tức là nó sẽ không clone biến reference bên trong object (subobject bên trong object vẫn trỏ cùng vùng nhớ).
 
 Nếu subobject giữa original object và shallow clone object là immutable, hoặc subobject đó không bị tác động bởi bất cứ tiến trình nào, thì shallow copy là an toàn. <br>
 Ngược lại, cần define lại method clone để sử dụng deep copy.
-
-### Shallow copy vs Deep copy
-
