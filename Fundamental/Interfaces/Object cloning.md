@@ -13,3 +13,12 @@ Nhưng default, Object's clone method dùng shallow copy, tức là nó sẽ kh�
 
 Nếu subobject giữa original object và shallow clone object là immutable, hoặc subobject đó không bị tác động bởi bất cứ tiến trình nào, thì shallow copy là an toàn. <br>
 Ngược lại, cần define lại method clone để sử dụng deep copy.
+
+### Cloneable interface
+Cloneable (tagging interfaces or marker interface): indicating that the class designer understands the cloning process
+
+tagging interface: has no methods; its only purpose is to allow the use of instanceof in a type inquiry
+```java
+if (obj instanceof Cloneable) . . .
+```
+
