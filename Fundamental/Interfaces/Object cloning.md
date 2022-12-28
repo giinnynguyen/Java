@@ -29,9 +29,8 @@ public Employee clone() throws CloneNotSupportedException {
 ```
 
 ### Cloneable interface
-Cloneable (tagging interfaces or marker interface): indicating that the class designer understands the cloning process
+Cloneable: là một [tag interface](https://wiki.c2.com/?TagInterface), một dạng interface đặc biệt không có bất cứ method nào. Nhiệm vụ của interface kiểu này là để “tag” - đánh dấu 1 chức năng cho 1 object.
 
-tagging interface: has no methods; its only purpose is to allow the use of instanceof in a type inquiry
 ```java
 if (obj instanceof Cloneable) . . .
 ```
