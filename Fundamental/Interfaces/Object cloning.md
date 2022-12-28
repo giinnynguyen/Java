@@ -37,3 +37,20 @@ if (obj instanceof Cloneable) . . .
 
 ### Warning:
 Cloneable không được khuyến khích dùng, lý do nếu 1 class implements Cloneable thì tất cả subobject của class đó cũng phải implememts Cloneable
+
+### Alternative: Copy constructor vs Copy Static Factory Method
+```java 
+// Copy constructor
+public Language(Language language) {
+    this.name = language.name;
+    this.inception = language.inception;
+    this.paradigms = new ArrayList<>(language.paradigms);
+}
+```
+
+```java
+// Copy Static Factory Method
+public static Language create(Language language) {
+    return new Language(language);
+}
+```
