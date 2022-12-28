@@ -11,8 +11,8 @@ copy = original.clone()
 ### Shallow copy vs Deep copy
 Nhưng default, Object's clone method dùng shallow copy, tức là nó sẽ không clone biến reference bên trong object (subobject bên trong object vẫn trỏ cùng vùng nhớ).
 
-Nếu subobject giữa original object và shallow clone object là immutable, hoặc subobject đó không bị tác động bởi bất cứ tiến trình nào, thì shallow copy là an toàn. <br>
-Ngược lại, cần define lại method clone để sử dụng deep copy.
+Nếu subobject giữa original object và shallow clone object là immutable, hoặc subobject đó không bị tác động bởi bất cứ tiến trình nào (tức final constant), thì shallow copy là ok. <br>
+Ngược lại, cần define lại method clone để tạo deep copy.
 
 Deep copy:
 ```java
@@ -35,3 +35,5 @@ Cloneable: là một [tag interface](https://wiki.c2.com/?TagInterface), một d
 if (obj instanceof Cloneable) . . .
 ```
 
+### Warning:
+Cloneable không được khuyến khích dùng, lý do nếu 1 class implements Cloneable thì tất cả subobject của class đó cũng phải implememts Cloneable
