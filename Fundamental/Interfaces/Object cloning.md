@@ -16,8 +16,8 @@ Ngược lại, cần define lại method clone để sử dụng deep copy.
 
 Deep copy:
 ```java
-class Employee implements Cloneable
-    {
+class Employee implements Cloneable {
+    Date hireDay;
 . ..
 public Employee clone() throws CloneNotSupportedException {
         // call Object.clone()
