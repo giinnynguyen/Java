@@ -3,13 +3,17 @@
 => James Gosling led a team invented Java in 1991 called Oak, then release with name Java b/c trademark issue with Oak Technology company.
 Oracle now owned Java (befored it was Sun Microsystems)
 
-+&nbsp;What is the say for Java platform independent? <br>
++&nbsp;**Câu nói nổi tiếng của Java về platform independent?** <br>
 => write once, run everywhere <br>
-it means, write one source code and run it on many operating system
+(it means, write one source code and run it on many operating system)
 
-+&nbsp; Kể 1 số điểm nổi bật của Java: OOP, platform independent, security, fast, multithreaded 
+Lập trình viên viết mã nguồn (file .java) -> trình biên dịch compile mã nguồn thành mã bytecode (file .class) -> mã bytecode này được JVM thông dịch thành mã máy trên mỗi hệ điều hành khác nhau để execute.
 
-+&nbsp;What kind of application Java can developed? <br>
+Thật ra thì nó vẫn phụ thuộc vào từng hệ điều hành, vì mỗi JVM ở mỗi hệ điều hành được implement cách khác nhau để thông dịch bytecode thành mã máy khác nhau cho từng hệ điều hành. Nói nó ko phụ thuộc vào nền tảng đó là ở góc nhìn của lập trình viên, 1 người chỉ cần viết 1 đoạn mã nguồn và dùng đoạn mã đó chạy được trên nhiều nền tảng (write once, run everywhere).
+
++&nbsp; **Kể 1 số điểm nổi bật của Java**: OOP, platform independent, security, fast, multithreaded 
+
++&nbsp;**What kind of application Java can developed?** <br>
 => general-purpose: it means it can used to develop desktop app, web app, mobile app
 
 +&nbsp;What is Java applet?<br>
