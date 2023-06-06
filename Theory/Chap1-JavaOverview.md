@@ -18,6 +18,31 @@ it means, write one source code and run it on many operating system
 +&nbsp;What programming language does android use? <br>
 => Java/Kotlin
 
+# JDK, JRE
++&nbsp;Java specification vs Java API? <br>
+=> Java specifition: language design, thông thường từng phiên bản Java sẽ có specification doc<br>
+API: language implementation include package java.lang, java.util, java.collections, java.io,…(chứa cụ thể class có thuộc tính gì, phương thức gì)
+
++&nbsp;**Trong thư mục jdk có folder jre, jre đó khác gì với jre download rời (nằm bên ngoài thư mục jdk)?** <br>
+=> JRE nằm bên ngoài folder jdk được gọi là Public JRE -> dùng để chạy bất kỳ chương trình nào viết bằng java. Nó bao gồm tất cả mọi thứ cần thiết để chạy 1 file Java mà đã được compiled và đóng gói thành application, nhưng ko dùng để tạo chương trình đuợc.<br>
+JRE nằm trong folder jdk được gọi là Private JRE -> mục đích để JDK Tools sử dụng. (JDK bao gồm cả JRE và những gói khác như javac, javadoc,… để compiled và chạy chương trình).
+Public jre vs Private jre cũng hông có gì khác nhau, ngoài việc nếu chỉ cần chạy chương trình (vd chạy trên máy khách) thì cài jre là đủ.
+# A Java program
++&nbsp;Output direction: vd muốn chuyển hướng từ in output vào console sang in vô file: java Test > text.txt
+
++&nbsp;**Tại sao chỉ được phép có 1 public class trong 1 file và class name phải trùng với file name?** <br>
+=> Nguyên tắc là ko được có 2 public class cùng 1 file. Vì compiler cần tạo file .class từ một public class cùng tên với tên file đó. <br>
+Java có rule là trong 1 file source code .java, nếu có khai báo public class thì bắt buộc nó phải trùng tên file và chỉ được phép khai báo 1 public class trong 1 file (trừ inner class).<br>
+Nhưng nếu tất cả class trong file đều là default access thì đặt tên tùy ý, compiler vẫn tạo được tất cả file .class bằng số class khai báo. Vậy lý do thực sự ko phải là “bắt buộc phải trùng tên file thì nó mới compile được”.<br>
+Lý do:<br>
+Public khác default ở chỗ: public được import ở mọi nơi, default chỉ import nội bộ trong cùng package. Có hạn chế như kia giúp compiler tìm public class nhanh hơn,
+
+Giả sử file A.java có 2 public class A & B, ví dụ cần import class B thì compiler cần duyệt tất cả các file trong package đó để tìm ra B. Trong khi nếu file B.java chỉ gồm 1 public class B duy nhất thì nó nhảy thẳng đến B.java<br>
+> The type is declared public (and therefore is potentially accessible from code in other packages). This restriction implies that there must be at most one such type per compilation unit. This restriction makes it easy for a Java compiler to find a named class within a package. In practice, many programmers choose to put each class or interface type in its own compilation unit, whether or not it is public or is referred to by code in other compilation units. Source: https://docs.oracle.com/javase/specs/jls/se8/html/jls-7.html#jls-7.6 
+
++ 
+
+
 
 
 
