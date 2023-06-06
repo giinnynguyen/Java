@@ -4,7 +4,8 @@
 Oracle now owned Java (befored it was Sun Microsystems)
 
 +&nbsp;What is the say for Java platform independent? <br>
-=> write once, run everywhere 
+=> write once, run everywhere <br>
+it means, write one source code and run it on many operating system
 
 +&nbsp; Kể 1 số điểm nổi bật của Java: OOP, platform independent, security, fast, multithreaded 
 
