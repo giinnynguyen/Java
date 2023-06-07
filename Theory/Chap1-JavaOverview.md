@@ -44,7 +44,22 @@ Public khác default ở chỗ: public được import ở mọi nơi, default c
 Giả sử file A.java có 2 public class A & B, ví dụ cần import class B thì compiler cần duyệt tất cả các file trong package đó để tìm ra B. Trong khi nếu file B.java chỉ gồm 1 public class B duy nhất thì nó nhảy thẳng đến B.java<br>
 > The type is declared public (and therefore is potentially accessible from code in other packages). This restriction implies that there must be at most one such type per compilation unit. This restriction makes it easy for a Java compiler to find a named class within a package. In practice, many programmers choose to put each class or interface type in its own compilation unit, whether or not it is public or is referred to by code in other compilation units. Source: https://docs.oracle.com/javase/specs/jls/se8/html/jls-7.html#jls-7.6 
 
-+ 
++&nbsp;How to read user config from command line arguments? <br>
+=> chạy command: java ProgramA config1 config2 
+
+Trong hàm main(String[] args): <br> 
+String[] args là mảng các arguments lấy từ command line.<br> 
+args[0] => lấy ra config1<br> 
+args[1] => lấy ra coònig2
+
++&nbsp;Lấy 3 vd về syntax error, runtime error, logic error:<br>
+=> **syntax error:**<br>
+int a = “123”// gán sai kiểu, compiler chửi ngay lúc viết code<br>
+-**runtime error:**<br>
+int a = b/0; //chia cho 0 = infinity, lúc chạy chương trình tung ra lỗi<br>
+-**logic error:**<br>
+int a = 7/3; // kết quả = 2, expect là 2.3. Logic error không throw exception, 
+
 
 
 
