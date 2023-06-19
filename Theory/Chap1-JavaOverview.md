@@ -30,6 +30,7 @@ API: language implementation include package java.lang, java.util, java.collecti
 💦&nbsp;**Trong thư mục jdk có folder jre, jre đó khác gì với jre download rời (nằm bên ngoài thư mục jdk)?** <br>
 => JRE nằm bên ngoài folder jdk được gọi là Public JRE -> dùng để chạy bất kỳ chương trình nào viết bằng java. Nó bao gồm tất cả mọi thứ cần thiết để chạy 1 file Java mà đã được compiled và đóng gói thành application, nhưng ko dùng để tạo chương trình đuợc.<br>
 JRE nằm trong folder jdk được gọi là Private JRE -> mục đích để JDK Tools sử dụng. (JDK bao gồm cả JRE và những gói khác như javac, javadoc,… để compiled và chạy chương trình).
+
 Public jre vs Private jre cũng hông có gì khác nhau, ngoài việc nếu chỉ cần chạy chương trình (vd chạy trên máy khách) thì cài jre là đủ.
 # A Java program
 💦&nbsp;Output direction: vd muốn chuyển hướng từ in output vào console sang in vô file: java Test > text.txt
@@ -50,7 +51,7 @@ Giả sử file A.java có 2 public class A & B, ví dụ cần import class B t
 Trong hàm main(String[] args): <br> 
 String[] args là mảng các arguments lấy từ command line.<br> 
 args[0] => lấy ra config1<br> 
-args[1] => lấy ra coònig2
+args[1] => lấy ra config2
 
 💦&nbsp;Lấy 3 vd về syntax error, runtime error, logic error:<br>
 => **syntax error:**<br>
