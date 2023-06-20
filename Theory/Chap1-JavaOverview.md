@@ -66,6 +66,3 @@ int a = 7/3; // kết quả = 2, expect là 2.3. Logic error không throw except
 
 
 
-
-
-

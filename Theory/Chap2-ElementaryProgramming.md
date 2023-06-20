@@ -137,3 +137,13 @@ a = a + 1;
 => Đoạn code 2 sẽ bị compile error, lý do ```a + 1``` là kiểu int và không cùng kiểu với a =)))) <br>
 Tại sao ```a + 1``` là kiểu int, thì là vì promotion. Trong 1 phép biểu thức thì java ưu tiên promote kết quả về thằng có độ lớn lớn hơn (rule là cast ngầm sang type bigger) <br>
 trong phép ```a + 1``` thì có 2 hạng tử là a và 1, a có kiểu byte và 1 có kiểu int => promote kết quả về int =))))
+
+### 💦 Floating-point number (số thực)
+trong java có 2 kiểu dữ liệu là float & double để biểu diễn số thực, nói tới floating-point number cần biết 2 thứ là range(độ lớn) và precision (độ chính xác)
+
+Float có độ lớn là 32 bit, biểu diễn được giá trị từ -3.4 x 10^38 đến 3.4 x 10^38 nhưng độ chính xác chỉ được 7-8 digit sau dấu phẩy
+
+Double có độ lớn là 64 bit, biểu diễn được giá trị từ -1.7 x 10^308 to 1.7 x 10^308, độ chính xác được 15-16 digit sau dấu phẩy
+
+### 💦 Formatting 
+Rule: ```%[argument_index$][flags][width][.precision]conversion```
