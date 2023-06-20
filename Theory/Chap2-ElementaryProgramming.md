@@ -6,6 +6,7 @@
    import java.util.Scanner;
 ```
 Scanner là một class nằm trong gói java.util, là một gói thư viện của java chứa các hàm ultilities
+
 2. Create Scanner class instance:
 ```java
 Scanner scanner = new Scanner(System.in);
@@ -15,6 +16,7 @@ Scanner scanner = new Scanner(System.in);
 System.out.print("Enter your data: ");
 ```
 Data từ user console thông thường là primitive data type như number, string, boolean. Các kiểu dữ liệu khác như object, blob, image, binary thì có thể dùng các class InputStream trong java.io
+
 4. Read user data from scanner:<br>
 
 Tuỳ kiểu dữ liệu, sử dụng các hàm tương ứng để đọc primitive data:<br>
@@ -23,14 +25,17 @@ VD double => scanner.nextDouble(), int => scanner.nextInt();
 Lưu ý: khi gọi hàm nextLine() sau hàm nextInt(), kết quả của nextLine() sẽ là một chuỗi rỗng. Lý do vì nextLine() đọc kí tự "\n" khi user gõ Enter.
 
 Fixed bằng cách sử dụng ```scanner.skip(“[\r\n]+")``` ngay sau dòng nextInt(), truyền vào một RegExp thì scanner sẽ skip kí tự "\n".
+
 5. Handle user data:
 
 Note: Khi sử dụng nextInt(), nextLine(),... để đọc data từ user, java block luồng code đang chạy và đợi cho tới khi nào user nhập data. Có thể set time vd sau 1' user không có động thái gì, thì thông báo ra màn hình rồi terminate program.
+
 6. Close scanner:
 ```java
 scanner.close()
 ```
 Khi làm việc với file và network, luôn luôn đóng connection sau khi đã xong chuyện để release resource.
+
 ### 💦 Numeric Data Type
 | Name   | Range            | Storage Size    |
 |--------|------------------|-----------------|
