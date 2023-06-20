@@ -119,6 +119,21 @@ convert byte -> short (Widening Casting) <br>
 
 convert short -> byte (Narrowing Casting) <br>
 ```short b = 400, binary: 00000001 10010000```<br>
-```convert to byte => cắt 8 bit => binary: ```
+```convert to byte => cắt 8 bit => binary: 10010000, tức giá trị -112 => lose information```
 
+###  💦 Promotion:
+Hỏi: 2 đoạn code bên dưới có giống nhau không?
+```java
+byte a = 5;
+a += 1;
+```
+và
+```java
+byte a = 5;
+a = a + 1;
+```
 
+=> Đoạn code 1 okay không có vấn đề gì vì cả 2 statement đều cùng kiểu byte <br>
+=> Đoạn code 2 sẽ bị compile error, lý do ```a + 1``` là kiểu int và không cùng kiểu với a =)))) <br>
+Tại sao ```a + 1``` là kiểu int, thì là vì promotion. Trong 1 phép biểu thức thì java ưu tiên promote kết quả về thằng có độ lớn lớn hơn (rule là cast ngầm sang type bigger) <br>
+trong phép ```a + 1``` thì có 2 hạng tử là a và 1, a có kiểu byte và 1 có kiểu int => promote kết quả về int =))))
