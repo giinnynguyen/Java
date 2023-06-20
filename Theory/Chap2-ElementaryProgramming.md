@@ -121,7 +121,7 @@ convert short -> byte (Narrowing Casting) <br>
 ```short b = 400, binary: 00000001 10010000```<br>
 ```convert to byte => cắt 8 bit => binary: 10010000, tức giá trị -112 => lose information```
 
-###  💦 Promotion:
+### 💦 Promotion:
 Hỏi: 2 đoạn code bên dưới có giống nhau không?
 ```java
 byte a = 5;
@@ -138,6 +138,15 @@ a = a + 1;
 Tại sao ```a + 1``` là kiểu int, thì là vì promotion. Trong 1 phép biểu thức thì java ưu tiên promote kết quả về thằng có độ lớn lớn hơn (rule là cast ngầm sang type bigger) <br>
 trong phép ```a + 1``` thì có 2 hạng tử là a và 1, a có kiểu byte và 1 có kiểu int => promote kết quả về int =))))
 
+### 💦 Ưu tiên độ lớn hơn độ chính xác
+java cho phép gán float = int ngầm định, nhưng int = float nó la làng, lý do mất độ chính xác
+
+nhưng float x = 1000000001; (1 tỷ lẻ 1) cũng mất độ chính xác
+
+=> answer: the language designers decided that if the target type has a range large enough then an implicit conversion is allowed, even though there may be a loss of precision. Note that it is the range that is important, not the precision.
+
+https://stackoverflow.com/questions/11908429/java-allows-implicit-conversion-of-int-to-float-why
+
 ### 💦 Floating-point number (số thực)
 trong java có 2 kiểu dữ liệu là float & double để biểu diễn số thực, nói tới floating-point number cần biết 2 thứ là range(độ lớn) và precision (độ chính xác)
 
@@ -147,3 +156,23 @@ Double có độ lớn là 64 bit, biểu diễn được giá trị từ -1.7 x
 
 ### 💦 Formatting 
 Rule: ```%[argument_index$][flags][width][.precision]conversion```
+
+### 💦 Gán biến trước khi sử dụng
+Line 7 có lỗi không?
+```java
+public void test() {
+    int a = 9;
+    int b;
+    if (b > 3) {
+        b = 4;
+    }
+    System.out.print(b);//line 7
+}
+```
+=> câu trả lời là compile error <br>
+Lý do: compiler chỉ làm những gì nó chắc chắn thui, giả sử có 1 đoạn thread nào đó chạy ngang làm thay đổi giá trị của a, thì đoạn if sẽ không được thực thi
+
+=> Fixed:
+
+C1: gán a thành hằng số => a không thể changed => make sure if được chạy <br>
+C2: init giá trị default cho b
