@@ -36,6 +36,13 @@ scanner.close()
 ```
 Khi làm việc với file và network, luôn luôn đóng connection sau khi đã xong chuyện để release resource.
 
+### 💦 static typed
+tuyên ngôn của Java là 'strongly static typed', static typed có nghĩa là kiểu dữ liệu sẽ được xác định ngay tại thời điểm biên dịch và không thay đổi, để tránh cast từ loại object này sang loại object khác, vd cast từ People qua Dog là không được)
+
+Khai báo biến = với khai báo kiểu dữ liệu mà biến đó có thể lưu trữ (cấp phát bộ nhớ).
+
+
+
 ### 💦 Numeric Data Type
 | Name   | Range            | Storage Size    |
 |--------|------------------|-----------------|
@@ -98,8 +105,4 @@ Java lấy default cho số nguyên là int, và default cho số thực là dou
 4.0 -> kiểu double <br>
 4L or 4l -> kiểu long <br>
 4f or 4F -> kiểu float <br>
-
-### 💦 static typed
-tuyên ngôn của Java là 'strongly static typed', static typed có nghĩa là kiểu dữ liệu sẽ được xác định ngay tại thời điểm biên dịch và không thay đổi, để tránh cast từ loại object này sang loại object khác, vd cast từ People qua Dog là không nên)
-
 
