@@ -39,7 +39,7 @@ Khi làm việc với file và network, luôn luôn đóng connection sau khi đ
 ### 💦 static typed
 tuyên ngôn của Java là 'strongly static typed', static typed có nghĩa là kiểu dữ liệu sẽ được xác định ngay tại thời điểm biên dịch và không thay đổi, để tránh cast từ loại object này sang loại object khác, vd cast từ People qua Dog là không được)
 
-Khai báo biến = với khai báo kiểu dữ liệu mà biến đó có thể lưu trữ (cấp phát bộ nhớ).
+Khai báo biến có thể hiểu là khai báo kiểu dữ liệu mà biến đó có thể lưu trữ (cấp phát bộ nhớ).
 
 
 
