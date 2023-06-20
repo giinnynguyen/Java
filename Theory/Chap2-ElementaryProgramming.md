@@ -93,7 +93,7 @@ Fixed: ```int x = (int) (6/2.0)``` => casting kết quả expression về kiểu
 
 VD2: 
 ```java 
-double x = 6/2
+double x = 6/2;
 ``` 
 
 => kết quả của expression trả về int, vì là chuyển đổi từ datatype int có độ lớn nhỏ hơn double nên có thể cast ngầm được
@@ -105,4 +105,20 @@ Java lấy default cho số nguyên là int, và default cho số thực là dou
 4.0 -> kiểu double <br>
 4L or 4l -> kiểu long <br>
 4f or 4F -> kiểu float <br>
+
+### 💦 Casting (ép kiểu):
++ Widening Casting (automatically) - converting a smaller type to a larger type size
+  ```byte -> short -> char -> int -> long -> float -> double```
++ Narrowing Casting (manually) - converting a larger type to a smaller size type
+  ```double -> float -> long -> int -> char -> short -> byte```
+
+convert byte -> short (Widening Casting) <br>
+```byte b = 8, binary: 000010000```<br>
+```convert to short => add thêm 8 bit => binary: 00000000 00001000, value = 8```
+=> no losing bit information
+
+convert short -> byte (Narrowing Casting) <br>
+```short b = 400, binary: 00000001 10010000```<br>
+```convert to byte => cắt 8 bit => binary: ```
+
 
