@@ -67,7 +67,7 @@ int binaryNumber = 0b1000;
 ```
 
 #### Unsigned Bit
-Java không hỗ trợ unsigned bit, nhưng unsigned bit hiểu đơn giản là không có bit dấu. Nên nó có có thể biểu diễn giá trị từ 0 tới 2^8 tức 255 giá trị (cho kiểu byte). Vì thế unsigned byte có độ lớn 2^8, unsigned int có độ lớn 2^32,...
+Java không hỗ trợ unsigned bit, nhưng unsigned bit hiểu đơn giản là không có bit dấu. Nên nó có có thể biểu diễn giá trị từ 0 tới 2^n (255 giá trị cho kiểu byte). 
 
 #### Tràn số:
 VD integer có range là -2^31 tới 2^31-1, giá trị maximum mà int có thể biểu diễn là 2147483647, nếu gán một giá trị vượt quá dung lượng, sẽ gây nên tràn số.
